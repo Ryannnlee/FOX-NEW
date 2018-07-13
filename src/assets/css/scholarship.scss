@@ -143,18 +143,19 @@ $primary-color: #051468;
 
 .qualSlickBig,
 .procSlickBig {
-    width: 100%;
+    width: 92%;
     margin: 0 auto;
+    padding: 3% 0;
     .slick-prev,
     .slick-next {
         z-index: 2;
         opacity: 0.75;
     }
     .slick-prev {
-        left: 5px;
+        left: -45px;
     }
     .slick-next {
-        right: 5px;
+        right: -45px;
     }
 }
 
@@ -324,6 +325,12 @@ $primary-color: #051468;
             left: 0;
         }
         .slick-next {
+            right: 0;
+        }
+        .slick-dots {
+            width: 80%;
+            margin: 0 auto;
+            left: 0;
             right: 0;
         }
     }

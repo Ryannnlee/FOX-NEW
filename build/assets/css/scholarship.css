@@ -209,7 +209,7 @@
   padding: 0 25px;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
   .lightbox-box {
     border: 5px solid #fff;
   }
@@ -383,8 +383,9 @@
 
 .qualSlickBig,
 .procSlickBig {
-  width: 100%;
+  width: 92%;
   margin: 0 auto;
+  padding: 3% 0;
 }
 
 .qualSlickBig .slick-prev,
@@ -397,12 +398,12 @@
 
 .qualSlickBig .slick-prev,
 .procSlickBig .slick-prev {
-  left: 5px;
+  left: -45px;
 }
 
 .qualSlickBig .slick-next,
 .procSlickBig .slick-next {
-  right: 5px;
+  right: -45px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -590,6 +591,12 @@
     left: 0;
   }
   .allSlick .slick-next {
+    right: 0;
+  }
+  .allSlick .slick-dots {
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
     right: 0;
   }
   #section3 .container {
