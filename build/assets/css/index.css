@@ -9,7 +9,7 @@
   height: 100%;
   overflow: auto;
   background-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .lightbox-box {
@@ -209,6 +209,12 @@
   padding: 0 25px;
 }
 
+@media screen and (min-width: 767px) {
+  .lightbox-box {
+    border: 5px solid #fff;
+  }
+}
+
 /* Layout Lightbox ----------------------------------- */
 #section0 {
   background: url(../images/index/kv-bg.png) center no-repeat;
@@ -284,7 +290,7 @@
   max-width: 70%;
   display: block;
   margin: 50% auto 0;
-  padding-bottom: 25%;
+  padding-bottom: 30%;
 }
 
 .apply-content {
@@ -654,7 +660,6 @@
   background-repeat: repeat-x;
   background-position: right;
   background-size: 50%;
-  margin-top: calc(3% + 85px);
 }
 
 #section3 .content {
@@ -708,11 +713,6 @@
   #section3 .content .button a {
     font-size: 1.4em;
   }
-}
-
-.winH {
-  width: 100%;
-  min-height: 100vh;
 }
 
 @media screen and (max-width: 1440px) {
@@ -871,5 +871,8 @@
   }
   #section2 .teacherSlick .slick-prev {
     left: 10px;
+  }
+  #section2 .teacherSlick-txt {
+    width: 90%;
   }
 }

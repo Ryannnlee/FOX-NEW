@@ -11,7 +11,7 @@
     // padding-top: 5%;
     overflow: auto;
     background-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .lightbox-box {
@@ -198,6 +198,12 @@
 
 .modal-center>.Setin {
     padding: 0 25px;
+}
+
+@media screen and (min-width: 767px) {
+    .lightbox-box {
+        border: 5px solid #fff;
+    }
 }
 
 

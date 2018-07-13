@@ -1,0 +1,351 @@
+@import "base/transform";
+@import "base/lightbox";
+$light-color: #16d3d3;
+$primary-color: #051468;
+.gray-box {
+    width: 95%;
+    // min-height: 105vh;
+    background: #dfe3e6;
+    position: relative;
+    top: 0;
+    text-align: center;
+    height: 100%;
+    &::after {
+        content: '';
+        width: 100%;
+        height: calc(96% - 80px);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &::before {
+        content: '';
+        width: 0;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .container {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 1;
+        text-align: left;
+    }
+}
+
+.scrolltop {
+    border: 2px solid $light-color;
+    span {
+        color: $light-color;
+    }
+}
+
+.lightbox {
+    opacity: 0;
+    display: block;
+    z-index: -1;
+    @include transition(all 0.3s);
+    background-color: rgba(0, 0, 0, 0.8);
+    .lightbox-content {
+        background: #e1e1e1;
+        border-radius: 0;
+        height: 100%;
+        overflow-y: scroll;
+        >.allSlick {
+            position: relative;
+        }
+    }
+}
+
+.section-title {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    h2 {
+        margin-top: 0.35em;
+        margin-bottom: 0.35em;
+    }
+    p {
+        font-size: 1.15em;
+        color: #333333;
+        font-weight: bold;
+    }
+}
+
+#section0 {
+    background: url(../images/sship/kv-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#section1 {
+    background: url(../images/sship/section1-bg.jpg) center no-repeat;
+    background-size: cover;
+    .gray-box {
+        border-top-left-radius: 100px;
+        margin-left: 5%;
+        padding-right: 5%;
+        &::after {
+            background: url(../images/sship/first.png) no-repeat;
+            background-size: contain;
+            background-position-x: 95%;
+        }
+    }
+}
+
+.allSlick {
+    width: 75%;
+    margin: 2% auto;
+    .slick-dots {
+        bottom: -32px;
+        li {
+            background: $primary-color;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            margin: 0 10px;
+            opacity: 0.4;
+            @include transition(all 0.3s);
+            &.slick-active {
+                opacity: 1;
+            }
+            button {
+                width: 100%;
+                height: 100%;
+                &:before {
+                    color: transparent;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+    .slick-prev,
+    .slick-next {
+        width: 38px;
+        height: 38px;
+    }
+    .slick-prev {
+        background: url(../images/sship/prev.png) center no-repeat;
+        background-size: cover;
+        left: -50px;
+    }
+    .slick-next {
+        background: url(../images/sship/next.png) center no-repeat;
+        background-size: cover;
+        right: -50px;
+    }
+    .slick-dotted.slick-slider {
+        margin-bottom: 100px;
+    }
+}
+
+.qualSlickBig,
+.procSlickBig {
+    width: 100%;
+    margin: 0 auto;
+    .slick-prev,
+    .slick-next {
+        z-index: 2;
+        opacity: 0.75;
+    }
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .qualSlickBig,
+    .procSlickBig {
+        .slick-prev,
+        .slick-next {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.clear {
+    width: 100%;
+    display: block;
+    clear: both;
+    height: 10vh;
+}
+
+#section2 {
+    background: url(../images/sship/section2-bg.jpg) center no-repeat;
+    background-size: cover;
+    .gray-box {
+        border-bottom-right-radius: 100px;
+        margin-right: 5%;
+        padding-left: 5%;
+        &::after {
+            background: url(../images/sship/second.png) no-repeat;
+            background-size: contain;
+            background-position-x: 5%;
+        }
+    }
+}
+
+#section3 {
+    background: url(../images/sship/section3-bg.jpg) center no-repeat;
+    background-size: cover;
+    .last-section {
+        &::before {
+            content: '';
+            width: 100%;
+            height: calc(90% - 80px);
+            background: url(../images/sship/third.png) no-repeat;
+            background-size: contain;
+            background-position-x: 95%;
+            opacity: 0.3;
+            position: absolute;
+            top: 50%;
+            @include transform(translate(0, -50%));
+            // z-index: -1;
+        }
+    }
+    .container {
+        padding: 0;
+    }
+    .downloadBox {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 10%;
+        a {
+            display: inline-block;
+            color: $primary-color;
+            margin: 0 auto;
+            background: rgba(223, 227, 229, 0.96);
+            border-radius: 15px;
+            padding: 2em 4em;
+            box-sizing: border-box;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            @include transition(all 0.3s);
+            &:hover {
+                text-decoration: none;
+                background-color: white;
+                @include transform(scale(1.05));
+                z-index: 3;
+            }
+        }
+        span {
+            display: inline-block;
+            font-size: 1.71em;
+            font-weight: 500;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+            border-bottom: 3px solid $primary-color;
+            color: $primary-color;
+        }
+        h3 {
+            display: block;
+            color: $primary-color;
+        }
+        .download-img {
+            width: 50%;
+            max-width: 140px;
+            min-width: 90px;
+            margin: 0 auto;
+            margin-bottom: 3em;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #section0 {
+        background: url(../images/sship/kv-bg-m.jpg) center no-repeat;
+        background-size: cover;
+        .kv-content>h1 {
+            left: 20%;
+        }
+    }
+    .gray-box {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        background: rgba(228, 228, 228, 0.9);
+        &::after {
+            height: 80%;
+            bottom: auto;
+            top: calc(50% + 40px);
+            transform: translate(0, -50%);
+        }
+        .container {
+            padding: 0 !important;
+        }
+    }
+    #scholarship {
+        .section-title {
+            width: 96%;
+            margin-bottom: 10%;
+        }
+    }
+    .allSlick {
+        width: calc(96% - 100px);
+        margin: 5% auto;
+    }
+    #section3 {
+        background: url(../images/sship/section3-bg-m.jpg) center no-repeat;
+        background-size: cover;
+    }
+    .last-section {
+        min-height: auto;
+        padding-top: 0;
+        div {
+            position: relative;
+        }
+        &::before {
+            height: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-title h2 {
+        font-size: 2.4em;
+    }
+    .allSlick {
+        width: 100%;
+        .slick-prev,
+        .slick-next {
+            width: 20px;
+            height: 20px;
+            top: auto;
+            bottom: -44px;
+        }
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+        }
+    }
+    #section3 .container {
+        padding-top: calc(2% + 70px);
+    }
+    .shareLink {
+        padding: 0;
+        margin-bottom: 30%;
+    }
+    .lightbox .lightbox-content {
+        &:before {
+            content: '';
+            width: 0;
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        >.allSlick {
+            width: 99%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}

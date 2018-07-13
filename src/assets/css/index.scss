@@ -69,7 +69,7 @@ $primary-color: #051468;
     max-width: 70%;
     display: block;
     margin: 50% auto 0;
-    padding-bottom: 25%;
+    padding-bottom: 30%;
 }
 
 .apply-content {
@@ -327,7 +327,7 @@ $primary-color: #051468;
         background-repeat: repeat-x;
         background-position: right;
         background-size: 50%;
-        margin-top: calc(3% + 85px);
+        // margin-top: calc(3% + 85px);
     }
     .content {
         background-color: #e8e8e8;
@@ -370,11 +370,6 @@ $primary-color: #051468;
             }
         }
     }
-}
-
-.winH {
-    width: 100%;
-    min-height: 100vh;
 }
 
 // responsive
@@ -504,32 +499,37 @@ $primary-color: #051468;
             margin-right: auto;
         }
     }
-    #section2 .teacherSlick {
-        .slick-list {
-            padding: 0 !important;
-            width: 75%;
-            margin: 0 auto;
-        }
-        .slideCard.slick-active.slick-center {
-            @include transform(scale(1));
-        }
-        .slick-prev,
-        .slick-next {
-            z-index: 10;
-            width: 25px;
-            height: 25px;
-            background-color: #051468;
-            border-radius: 50%;
-            &:before,
-            &:after {
-                background: #ffffff;
+    #section2 {
+        .teacherSlick {
+            .slick-list {
+                padding: 0 !important;
+                width: 75%;
+                margin: 0 auto;
+            }
+            .slideCard.slick-active.slick-center {
+                @include transform(scale(1));
+            }
+            .slick-prev,
+            .slick-next {
+                z-index: 10;
+                width: 25px;
+                height: 25px;
+                background-color: #051468;
+                border-radius: 50%;
+                &:before,
+                &:after {
+                    background: #ffffff;
+                }
+            }
+            .slick-next {
+                right: 10px;
+            }
+            .slick-prev {
+                left: 10px;
             }
         }
-        .slick-next {
-            right: 10px;
-        }
-        .slick-prev {
-            left: 10px;
+        .teacherSlick-txt {
+            width: 90%;
         }
     }
 }

@@ -1,0 +1,133 @@
+<!-- @@master = ../layouts/default.html-->
+
+<!-- @@block  =  head-css -->
+<!-- index css -->
+<link rel="stylesheet" href="assets/css/scholarship.css">
+<!-- @@close -->
+
+<!-- @@block = content -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+            sectionsColor: ['#e8e8e8', '#e8e8e8', '#e8e8e8', '#e8e8e8'],
+            scrollOverflow: true,
+            css3: true
+        });
+    });
+</script>
+<div id="scholarship">
+    <div id="fullpage">
+        <div class="section kv" id="section0">
+            <div class="kv-content">
+                <h1><img src="assets/images/sship/kv-title.png" alt="鴻海獎學鯨 您的夢想頻率 被聽見"></h1>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="gray-box">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="hr dark-blue"></div>
+                        <h2 class="dark-blueTxt">申請資格與檢附文件</h2>
+                        <p>點擊圖片放大瀏覽。</p>
+                    </div>
+                    <ul class="qualSlick allSlick">
+                        <li class="slider"><img src="assets/images/sship/FB_1.jpg" alt=""></li>
+                        <li class="slider"><img src="assets/images/sship/FB_3.jpg" alt=""></li>
+                        <li class="slider"><img src="assets/images/sship/FB_4.jpg" alt=""></li>
+                        <li class="slider"><img src="assets/images/sship/FB_5.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <!-- <div class="clear"></div> -->
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="gray-box">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="hr dark-blue"></div>
+                        <h2 class="dark-blueTxt">申請流程</h2>
+                        <p>點擊圖片放大瀏覽。</p>
+                    </div>
+                    <ul class="procSlick allSlick">
+                        <li class="slider"><img src="assets/images/sship/FB_9.jpg" alt=""></li>
+                        <li class="slider"><img src="assets/images/sship/FB_10.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <!-- <div class="clear"></div> -->
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="last-section">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="hr light-blue"></div>
+                        <h2 class="light-blueTxt">詳細規章與辦法</h2>
+                    </div>
+                    <div class="downloadBox">
+                        <a href="https://drive.google.com/drive/folders/10FqLSMveXoQ1lgAuXkxFDHmxtCK0wcKT?%20usp=sharing" target="_blank">
+                            <div class="download-img"><img src="assets/images/sship/download-img.png" alt=""></div>
+                            <span>檔案大小： 2mb</span>
+                            <h3>點我下載</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="shareLink">
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank"><img src="assets/images/icon-mail-w.svg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/foxconnscholarship/" target="_blank"><img src="assets/images/icon-facebook-w.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <!-- @@include ../layouts/_footer.html -->
+
+        </div>
+    </div>
+</div>
+<div class="lightbox" id="lightbox1">
+    <div class="lightbox-box">
+        <span class="close_btn" onclick="closebtnVD();"></span>
+        <div class="lightbox-content">
+            <ul class="qualSlickBig allSlick">
+                <li class="slider"><img src="assets/images/sship/FB_1.jpg" alt=""></li>
+                <li class="slider"><img src="assets/images/sship/FB_3.jpg" alt=""></li>
+                <li class="slider"><img src="assets/images/sship/FB_4.jpg" alt=""></li>
+                <li class="slider"><img src="assets/images/sship/FB_5.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="lightbox" id="lightbox2">
+    <div class="lightbox-box">
+        <span class="close_btn" onclick="closebtnVD();"></span>
+        <div class="lightbox-content">
+            <ul class="procSlickBig allSlick">
+                <li class="slider"><img src="assets/images/sship/FB_9.jpg" alt=""></li>
+                <li class="slider"><img src="assets/images/sship/FB_10.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- @@close -->
+
+
+<!-- @@block  =  head-js -->
+<!-- index js -->
+<!-- Youtube API -->
+<script>
+    // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+<script src="assets/js/scholarship.js"></script>
+<!-- @@close -->

@@ -3,7 +3,7 @@
 .shareLink {
     width: 100%;
     text-align: center;
-    padding: 3em 0;
+    padding: 3em 0 5em 0;
     ul>li {
         display: inline-block;
         padding: 0 15px;
@@ -48,5 +48,11 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        display: none;
     }
 }

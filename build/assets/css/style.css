@@ -380,7 +380,7 @@ header {
   position: fixed;
   z-index: 13;
   right: 3%;
-  bottom: 15%;
+  bottom: 10%;
 }
 
 .scrolltop {
@@ -430,7 +430,11 @@ header {
 
 @media screen and (max-width: 767px) {
   #scrolltop {
-    bottom: 5%;
+    right: 1%;
+    bottom: 10%;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
@@ -438,7 +442,7 @@ header {
 .shareLink {
   width: 100%;
   text-align: center;
-  padding: 3em 0;
+  padding: 3em 0 5em 0;
 }
 
 .shareLink ul > li {
@@ -494,6 +498,12 @@ footer .footerBar ul li a {
 footer .footerBar ul li:last-of-type {
   border-right: none;
   padding-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    display: none;
+  }
 }
 
 @font-face {
@@ -563,6 +573,12 @@ h2 {
   margin-bottom: 1em;
 }
 
+h3 {
+  font-size: 2.4em;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
 p {
   font-size: 1em;
   line-height: 1.4em;
@@ -616,7 +632,26 @@ img {
   max-width: 1200px;
   display: block;
   margin: 0 auto;
-  padding-top: 85px;
+  padding-top: calc(1.2% + 85px);
+}
+
+.kv-content {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.kv-content > h1 {
+  width: 100%;
+  max-width: 232px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.kv-content > h1 img {
+  width: 100%;
 }
 
 .playbutton:before {
@@ -637,6 +672,12 @@ img {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+}
+
+.last-section {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: calc(3% + 85px);
 }
 
 @media screen and (min-width: 1024px) {
@@ -680,6 +721,11 @@ img {
 }
 
 @media screen and (max-width: 1024px) {
+  .kv-content > h1 {
+    width: 50%;
+    left: 5%;
+    top: calc(5% + 70px);
+  }
   .visible-desktop {
     display: none !important;
   }
@@ -704,6 +750,15 @@ img {
   body {
     font-size: 14px;
   }
+  h2 {
+    font-size: 2.8em;
+  }
+  .kv-content > h1 {
+    width: 40%;
+  }
+  .iScrollVerticalScrollbar {
+    width: 4px !important;
+  }
   .visible-desktop {
     display: none !important;
   }
@@ -721,5 +776,11 @@ img {
   }
   .hidden-phone {
     display: none !important;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  body {
+    font-size: 13px;
   }
 }
