@@ -599,8 +599,34 @@
     left: 0;
     right: 0;
   }
+  #section3::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(76, 76, 76, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   #section3 .container {
     padding-top: calc(2% + 70px);
+  }
+  #section3 .downloadBox a {
+    padding: 2em;
+  }
+  #section3 .downloadBox .download-img {
+    width: 40%;
+    min-width: 50px;
+    margin-bottom: 1.5em;
+  }
+  #section3 .downloadBox span {
+    font-size: 1.25em;
+    border-bottom: 1.5px solid #051468;
+  }
+  #section3 .downloadBox h3 {
+    font-size: 1.8em;
   }
   .shareLink {
     padding: 0;
