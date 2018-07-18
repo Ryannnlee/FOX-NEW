@@ -13,7 +13,15 @@
             anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
             sectionsColor: ['#e8e8e8', '#e8e8e8', '#e8e8e8', '#e8e8e8'],
             scrollOverflow: true,
-            css3: true
+            css3: true,
+            scrollOverflowOptions: {
+                scrollbars: true,
+                mouseWheel: true,
+                hideScrollbars: false,
+                fadeScrollbars: false,
+                disableMouse: true,
+                click: false
+            }
         });
     });
 </script>

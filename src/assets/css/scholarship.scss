@@ -213,6 +213,7 @@ $primary-color: #051468;
     }
     .container {
         padding: 0;
+        position: relative;
     }
     .downloadBox {
         width: 100%;
@@ -255,6 +256,9 @@ $primary-color: #051468;
             margin: 0 auto;
             margin-bottom: 3em;
         }
+    }
+    .shareLink {
+        position: relative;
     }
 }
 
