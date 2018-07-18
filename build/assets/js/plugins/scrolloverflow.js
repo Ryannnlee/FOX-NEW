@@ -3,10 +3,10 @@
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /**
-* Customized version of iScroll.js 0.0.8
-* It fixes bugs affecting its integration with fullpage.js
-* @license
-*/
+ * Customized version of iScroll.js 0.0.8
+ * It fixes bugs affecting its integration with fullpage.js
+ * @license
+ */
 /*! iScroll v5.2.0 ~ (c) 2008-2016 Matteo Spinelli ~ http://cubiq.org/license */
 (function (window, document, Math) {
     var rAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) {
@@ -102,13 +102,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         - 2.3.6 : `AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1`
         - 4.0.4 : `AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`
         - galaxy S3 is badAndroid (stock brower, webview)
-         `AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`
+        `AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`
         - galaxy S4 is badAndroid (stock brower, webview)
-         `AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`
+        `AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`
         - galaxy S5 is OK
-         `AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36 (Chrome/)`
+        `AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36 (Chrome/)`
         - galaxy S6 is OK
-         `AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36 (Chrome/)`
+        `AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36 (Chrome/)`
         */
         me.isBadAndroid = function () {
             var appVersion = window.navigator.appVersion;
@@ -290,6 +290,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
         return me;
     }();
+
     function IScroll(el, options) {
         this.wrapper = typeof el == 'string' ? document.querySelector(el) : el;
         this.scroller = this.wrapper.children[0];
@@ -1637,7 +1638,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                     this._key(e);
                     break;
                 case 'click':
-                    if (this.enabled && !e._constructed) {
+                    if (!e._constructed) {
+                        if (!e._constructed && target.type != "submit") {
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }
                         e.preventDefault();
                         e.stopPropagation();
                     }
@@ -1645,6 +1650,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
         }
     };
+
     function createDefaultScrollbar(direction, interactive, type) {
         var scrollbar = document.createElement('div'),
             indicator = document.createElement('div');
@@ -2107,12 +2113,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(window, document, Math);
 
 /*!
-* Scrolloverflow 2.0.0 module for fullPage.js >= 3
-* https://github.com/alvarotrigo/fullPage.js
-* @license MIT licensed
-*
-* Copyright (C) 2015 alvarotrigo.com - A project by Alvaro Trigo
-*/
+ * Scrolloverflow 2.0.0 module for fullPage.js >= 3
+ * https://github.com/alvarotrigo/fullPage.js
+ * @license MIT licensed
+ *
+ * Copyright (C) 2015 alvarotrigo.com - A project by Alvaro Trigo
+ */
 (function (window, document) {
     window.fp_scrolloverflow = function () {
 
@@ -2141,9 +2147,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         var AUTO_HEIGHT_RESPONSIVE = 'fp-auto-height-responsive';
 
         /*
-        * Turns iScroll `mousewheel` option off dynamically
-        * https://github.com/cubiq/iscroll/issues/1036
-        */
+         * Turns iScroll `mousewheel` option off dynamically
+         * https://github.com/cubiq/iscroll/issues/1036
+         */
         IScroll.prototype.wheelOn = function () {
             this.wrapper.addEventListener('wheel', this);
             this.wrapper.addEventListener('mousewheel', this);
@@ -2151,9 +2157,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         };
 
         /*
-        * Turns iScroll `mousewheel` option on dynamically
-        * https://github.com/cubiq/iscroll/issues/1036
-        */
+         * Turns iScroll `mousewheel` option on dynamically
+         * https://github.com/cubiq/iscroll/issues/1036
+         */
         IScroll.prototype.wheelOff = function () {
             this.wrapper.removeEventListener('wheel', this);
             this.wrapper.removeEventListener('mousewheel', this);
@@ -2161,8 +2167,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         };
 
         /**
-        * Returns an integer representing the padding dimensions in px.
-        */
+         * Returns an integer representing the padding dimensions in px.
+         */
         function getPaddings(element) {
             var section = fp_utils.closest(element, SECTION_SEL);
             if (section != null) {
@@ -2193,8 +2199,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             };
 
             /**
-            * Creates the scrollbar for the sections and slides in the site
-            */
+             * Creates the scrollbar for the sections and slides in the site
+             */
             function createScrollBarForAll() {
                 if (fp_utils.hasClass(document.body, RESPONSIVE)) {
                     removeResponsiveScrollOverflows();
@@ -2204,11 +2210,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
 
             /**
-            * Checks if the element needs scrollbar and if the user wants to apply it.
-            * If so it creates it.
-            *
-            * @param {Object} element   jQuery object of the section or slide
-            */
+             * Checks if the element needs scrollbar and if the user wants to apply it.
+             * If so it creates it.
+             *
+             * @param {Object} element   jQuery object of the section or slide
+             */
             function createScrollBar(element) {
                 //User doesn't want scrollbar here? Sayonara baby!
                 if (fp_utils.hasClass(element, 'fp-noscroll')) return;
@@ -2264,9 +2270,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
 
             /**
-            * Applies a callback function to each section in the site
-            * or the slides within them
-            */
+             * Applies a callback function to each section in the site
+             * or the slides within them
+             */
             function forEachSectionAndSlide(callback) {
                 $(SECTION_SEL).forEach(function (section) {
                     var slides = $(SLIDE_SEL, section);
@@ -2282,8 +2288,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
 
             /**
-            * Removes scrollOverflow for sections using the class `fp-auto-height-responsive`
-            */
+             * Removes scrollOverflow for sections using the class `fp-auto-height-responsive`
+             */
             function removeResponsiveScrollOverflows() {
                 var scrollOverflowHandler = self.options.scrollOverflowHandler;
                 forEachSectionAndSlide(function (element) {
@@ -2351,10 +2357,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             },
 
             /**
-            * Turns off iScroll for the destination section.
-            * When scrolling very fast on some trackpads (and Apple laptops) the inertial scrolling would
-            * scroll the destination section/slide before the sections animations ends.
-            */
+             * Turns off iScroll for the destination section.
+             * When scrolling very fast on some trackpads (and Apple laptops) the inertial scrolling would
+             * scroll the destination section/slide before the sections animations ends.
+             */
             onLeave: function onLeave() {
                 iscrollHandler.toggleWheel(false);
             },
