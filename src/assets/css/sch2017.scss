@@ -1,0 +1,381 @@
+@import "base/transform";
+$light-color: #16d3d3;
+$primary-color: #051468;
+.gray-box {
+    background: rgba(223, 227, 230, 0.95);
+    &::after {
+        content: none;
+    }
+}
+
+.divider {
+    width: 100%;
+    margin: 2% 0;
+    border: 1px dashed #bdbdbd;
+}
+
+.AllBtn {
+    width: 100%;
+    text-align: center;
+    a {
+        display: inline-block;
+        margin: 0 auto;
+        font-size: 1.5em;
+        line-height: 1.2em;
+        color: #333333;
+        background: #ffffff;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.5);
+        padding: 0.5em 2em;
+    }
+}
+
+#section0 {
+    background: url(../images/sch2017/kv-bg.jpg) center no-repeat;
+    background-size: cover;
+    .kv-content>h1 {
+        width: 30%;
+        max-width: 580px;
+        top: 56%;
+        left: 16%;
+        @include transform(translate(0, -50%));
+    }
+}
+
+#section1 {
+    background: url(../images/sch2017/section1-bg.jpg) center no-repeat;
+    background-size: cover;
+    &::after {
+        content: '';
+        width: 29%;
+        background: url(../images/sch2017/section1_culode.png) no-repeat;
+        background-size: 100%;
+        background-position: center right;
+        padding-bottom: 26%;
+        position: absolute;
+        right: -6%;
+        bottom: -14%;
+        z-index: 1;
+    }
+    .gray-box {
+        border-top-left-radius: 0;
+        padding-left: 5%;
+        margin-left: 0;
+        padding-right: 0;
+    }
+    .container {
+        padding: 0;
+    }
+    .iframeVideo {
+        width: 75%;
+        padding-bottom: 42.1875%;
+        margin: 0 auto;
+        position: relative;
+        background: #cccccc;
+        iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    }
+}
+
+#section2 {
+    background: none;
+    .section2Bg {
+        background: url(../images/sch2017/section2-bg.jpg) center no-repeat;
+        background-size: cover;
+    }
+    .gray-box {
+        border-radius: 0;
+        border-bottom-left-radius: 100px;
+        margin-left: 5%;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 5%;
+        padding-bottom: 7%;
+    }
+    .section-title {
+        width: 100%;
+    }
+    .ReportArticle {
+        width: 100%;
+        margin: 8% auto 12% auto;
+        &::after {
+            content: '';
+            width: 100%;
+            clear: both;
+        }
+    }
+    .RATxt {
+        width: 40%;
+        float: left;
+        .timeTag {
+            width: auto;
+            display: inline-block;
+            padding: 5px;
+            background: $primary-color;
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: $primary-color;
+            font-size: 2.4em;
+            line-height: 1.4em;
+            font-weight: bold;
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid $primary-color;
+        }
+        p {
+            font-size: 1.25em;
+            line-height: 1.65em;
+            text-indent: 2em;
+            margin-bottom: 2em;
+            color: #333333;
+        }
+    }
+    .RAImg {
+        width: 56%;
+        float: right;
+    }
+    .otherReport {
+        width: 100%;
+        margin: 2% 0;
+        padding-bottom: 5%;
+        ul {
+            width: 100%;
+            text-align: center;
+            font-size: 0;
+        }
+        .ORitem {
+            width: 31%;
+            display: inline-block;
+            margin: 1.5%;
+            font-size: 16px;
+            &:nth-child(3n+1) {
+                margin-left: 0;
+            }
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+            .ORimg {
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background: #000;
+                    opacity: 0.4;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    @include transition(all 0.3s);
+                }
+            }
+            @media (min-width: 1024px) {
+                &:hover {
+                    .ORTxt {
+                        &::after {
+                            @include transform(translate(0, 5px)rotate(-135deg));
+                        }
+                    }
+                    .ORimg {
+                        &::before {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+            .ORTxt {
+                width: 100%;
+                display: block;
+                padding: 1.25em 1.25em 2.4em 1.25em;
+                text-align: left;
+                font-size: 1.25em;
+                line-height: 2em;
+                background: #ffffff;
+                color: #162a38;
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    bottom: 18px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    border-top: 1px solid #162a38;
+                    border-left: 1px solid #162a38;
+                    @include transform(rotate(-135deg));
+                    @include transition(all 0.3s);
+                }
+            }
+        }
+    }
+}
+
+#section3 {
+    background: none;
+    .section3Bg {
+        width: 100%;
+        height: 60vh;
+        background: url(../images/sch2017/section3-bg.jpg) center no-repeat;
+        background-size: cover;
+        position: relative;
+        .shareLink {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #section0 .kv-content>h1 {
+        top: 40%;
+        left: 10%;
+    }
+    #section2 {
+        .RATxt {
+            h3 {
+                font-size: 2.2em;
+            }
+        }
+        .otherReport .ORitem .ORTxt {
+            font-size: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #section0 .kv-content>h1 {
+        @include transform(translate(0, 0));
+        top: calc(5% + 85px);
+        left: 10%;
+    }
+    #section0 {
+        background: url(../images/sch2017/kv-bg-m.jpg) center no-repeat;
+        background-size: cover;
+    }
+    #section1.fp-section,
+    #section1 .fp-slide,
+    #section1 .fp-tableCell {
+        height: auto !important;
+    }
+    #section1 {
+        &::after {
+            right: 0;
+        }
+        .section-title {
+            width: 100%;
+        }
+        .iframeVideo {
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+        .gray-box .container {
+            padding: 10% 0 !important;
+        }
+    }
+    #section2 .OtherHot {
+        padding-bottom: 10%;
+    }
+    #section3 .section3Bg {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    #section0 .kv-content>h1 {
+        top: calc(2% + 85px);
+        width: 40%;
+    }
+    #section2 {
+        .RAImg {
+            width: 80%;
+            float: none;
+            margin: 0 auto;
+            margin-bottom: 2%;
+            img {
+                width: 100%;
+            }
+        }
+        .RATxt {
+            width: 80%;
+            margin: 0 auto;
+            float: none;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #section1 .gray-box .container {
+        padding: 10% 0 20% 0 !important;
+    }
+    #section2 {
+        .ReportArticle {
+            margin: 10% auto 18% auto;
+        }
+        .RAImg {
+            width: 100%;
+            margin-bottom: 5%;
+        }
+        .RATxt {
+            width: 100%;
+            .timeTag {
+                font-size: 0.9em;
+            }
+            h3 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1em;
+                margin-bottom: 1em;
+            }
+        }
+        .otherReport {
+            ul {
+                text-align: left;
+            }
+            .ORitem {
+                width: 100%;
+                margin: 2% 0;
+                display: table;
+                a {
+                    display: table-row;
+                }
+                .ORimg {
+                    width: 40%;
+                    display: table-cell;
+                    background: #ffffff;
+                    &::before {
+                        content: none;
+                    }
+                }
+                .ORTxt {
+                    width: 60%;
+                    display: table-cell;
+                    padding: 5px 20px 5px 5px;
+                    vertical-align: middle;
+                    line-height: 1.4em;
+                    font-size: 0.9em;
+                    &::after {
+                        width: 10px;
+                        height: 10px;
+                        left: auto;
+                        right: 5px;
+                        top: 50%;
+                        bottom: auto;
+                        @include transform(translate(0, -50%) rotate(135deg));
+                    }
+                }
+            }
+        }
+    }
+    #section3 .section3Bg .shareLink {
+        margin-bottom: 5%;
+    }
+}
