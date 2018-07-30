@@ -1,0 +1,133 @@
+    @import "base/transform";
+    $light-color: #16d3d3;
+    $primary-color: #051468;
+    .wrapper {
+        width: 100%;
+        display: block;
+        background-color: #112e7c;
+        background-image: url(../images/aboutus/kgbg.jpg);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    
+    .scrolltop {
+        border: 2px solid #16d3d3;
+        span {
+            color: #16d3d3;
+        }
+    }
+    
+    #section0 {
+        width: 100%;
+        padding-bottom: 105%;
+        // background: rgba(226, 10, 10, 0.5);
+    }
+    
+    .container {
+        text-align: center;
+        .hr {
+            display: inline-block;
+        }
+    }
+    
+    .section-title {
+        margin-bottom: 50px;
+        h2 {
+            margin-bottom: 0.5em;
+        }
+        >p {
+            font-size: 1.25em;
+            color: #ffffff;
+            line-height: 1.66em;
+        }
+    }
+    
+    #section1 {
+        padding-bottom: 20%;
+        .aboutImg {
+            width: 100%;
+            ul {
+                width: 100%;
+            }
+            li {
+                width: 96%;
+                max-width: 560px;
+                margin: 2em auto;
+                @include transition(all 0.3s);
+                &:hover {
+                    @include transform(scale(1.05));
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    #section2 {
+        .aboutPerson {
+            width: 100%;
+            ul {
+                font-size: 0;
+                li {
+                    display: inline-block;
+                    font-size: 16px;
+                    width: 18.5%;
+                    margin: 0 0.75%;
+                    margin-bottom: 5%;
+                    img {
+                        width: 100%;
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                    p.title {
+                        display: inline-block;
+                        color: $light-color;
+                        font-size: 1em;
+                        padding-bottom: 3px;
+                        border-bottom: 1px solid $light-color;
+                    }
+                    p.name {
+                        width: 100%;
+                        color: #ffffff;
+                        font-size: 1.8em;
+                    }
+                }
+            }
+        }
+    }
+    
+    #section3 {
+        position: relative;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .wrapper {
+            background-image: url(../images/aboutus/kgbg-m.jpg);
+            background-size: 100%;
+        }
+        #section0 {
+            padding-bottom: 250%;
+        }
+        #section2 .aboutPerson ul li {
+            width: 25%;
+            margin-right: 0;
+            padding: 0 15px;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        #section2 {
+            .container {
+                padding-top: 0;
+            }
+            .aboutPerson ul li {
+                width: 50%;
+                margin-bottom: 30px;
+                p.name {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }

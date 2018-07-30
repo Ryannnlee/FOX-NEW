@@ -1,0 +1,257 @@
+@import "base/transform";
+$light-color: #16d3d3;
+$primary-color: #051468;
+.divider {
+    width: 100%;
+    margin: 2% 0;
+    border: 1px dashed #bdbdbd;
+}
+
+.scrolltop {
+    border: 2px solid #16d3d3;
+    span {
+        color: #16d3d3;
+    }
+}
+
+#section0 {
+    background: url(../images/article/kvbg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#section1 {
+    background-color: #3e88e7;
+    background-image: url(../images/article/contentbg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    margin-bottom: -50vh;
+    .gray-box {
+        width: 96%;
+        max-width: 1560px;
+        background: rgba(255, 255, 255, 0.9);
+        margin: 0 auto;
+        position: relative;
+        top: -50vh;
+        border-bottom-left-radius: 100px;
+    }
+    .container {
+        max-width: 1000px;
+        padding-bottom: calc(1.2% + 85px);
+    }
+}
+
+.articleTitle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3em;
+    .timeTag {
+        width: auto;
+        display: inline-block;
+        padding: 5px 10px;
+        background: $primary-color;
+        color: #ffffff;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    h2 {
+        padding-bottom: 0.8em;
+        margin-bottom: 0.8em;
+        border-bottom: 2px solid $primary-color;
+    }
+    li {
+        display: inline-block;
+        font-size: 1.15em;
+        line-height: 1.2em;
+        color: #333333;
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+}
+
+.articleContent {
+    width: 100%;
+    .ACImg {
+        width: 100%;
+        display: block;
+        >img {
+            width: 100%;
+        }
+        >.source {
+            width: 100%;
+            display: block;
+            font-size: 1em;
+            line-height: 2.4em;
+            color: $primary-color;
+        }
+    }
+    .ACTxt {
+        margin: 3em 0;
+        >p {
+            width: 100%;
+            margin-bottom: 2em;
+            font-size: 1.25em;
+            line-height: 1.66em;
+            letter-spacing: 1px;
+            text-indent: 2em;
+            font-weight: 400;
+            color: $primary-color;
+        }
+    }
+}
+
+.ExtendRead {
+    text-align: center;
+    .ERReport {
+        width: 100%;
+        margin: 2% 0;
+        padding-bottom: 5%;
+        ul {
+            width: 100%;
+            text-align: center;
+            font-size: 0;
+        }
+        .ERitem {
+            width: 31%;
+            display: inline-block;
+            margin: 1.5%;
+            font-size: 16px;
+            &:nth-child(3n+1) {
+                margin-left: 0;
+            }
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+            .ERimg {
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background: #000;
+                    opacity: 0.4;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    @include transition(all 0.3s);
+                }
+            }
+            @media (min-width: 1024px) {
+                &:hover {
+                    .ERTxt {
+                        &::after {
+                            @include transform(translate(0, 5px)rotate(-135deg));
+                        }
+                    }
+                    .ERimg {
+                        &::before {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+            .ERTxt {
+                width: 100%;
+                display: block;
+                padding: 1.15em 1.15em 2em 1.15em;
+                text-align: left;
+                font-size: 1.15em;
+                line-height: 1.66em;
+                background: #ffffff;
+                color: #162a38;
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    bottom: 18px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    border-top: 1px solid #162a38;
+                    border-left: 1px solid #162a38;
+                    @include transform(rotate(-135deg));
+                    @include transition(all 0.3s);
+                }
+            }
+        }
+    }
+}
+
+#section3 {
+    background: none;
+    position: relative;
+    .section3Bg {
+        width: 100%;
+        height: 60vh;
+        background: url(../images/sch2017/section3-bg.jpg) center no-repeat;
+        background-size: cover;
+        position: relative;
+        .shareLink {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #section0 {
+        background: url(../images/article/kvbg-m.jpg) center no-repeat;
+        background-size: cover;
+        // background-position-x: 60%;
+    }
+    #section1 .gray-box {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #section1 {
+        .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        .articleContent .ACTxt>p {
+            margin-bottom: 1em;
+            font-size: 1em;
+        }
+    }
+    .ExtendRead .ERReport {
+        .ERitem {
+            width: 100%;
+            display: table;
+            margin: 10px 0 !important;
+            .ERimg {
+                width: 40%;
+                display: table-cell;
+                &::before {
+                    content: none;
+                }
+            }
+            .ERTxt {
+                width: 60%;
+                display: table-cell;
+                padding: 5px 20px 5px 5px;
+                vertical-align: middle;
+                line-height: 1.4em;
+                font-size: 0.9em;
+                &::after {
+                    width: 10px;
+                    height: 10px;
+                    left: auto;
+                    right: 5px;
+                    top: 50%;
+                    bottom: auto;
+                    @include transform(translate(0, -50%) rotate(135deg));
+                }
+            }
+        }
+    }
+}
