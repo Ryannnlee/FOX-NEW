@@ -35,6 +35,25 @@ header {
     }
 }
 
+header.menuScroll {
+    background: rgba(256, 256, 256, 0.4);
+    box-shadow: none;
+    color: #ffffff;
+    .nav-right {
+        li {
+            a {
+                color: #ffffff;
+            }
+            @media (min-width: 768px) {
+                border-right: 1px solid #ffffff;
+            }
+        }
+    }
+    .scrolltop {
+        opacity: 0;
+    }
+}
+
 #logo {
     width: 36%;
     max-width: 300px;

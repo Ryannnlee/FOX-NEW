@@ -87,6 +87,27 @@ header {
   opacity: 0;
 }
 
+header.menuScroll {
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #ffffff;
+}
+
+header.menuScroll .nav-right li a {
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  header.menuScroll .nav-right li {
+    border-right: 1px solid #ffffff;
+  }
+}
+
+header.menuScroll .scrolltop {
+  opacity: 0;
+}
+
 #logo {
   width: 36%;
   max-width: 300px;

@@ -129,6 +129,7 @@
   #section2 .aboutPerson ul li {
     width: 25%;
     margin-right: 0;
+    margin-left: 0;
     padding: 0 15px;
   }
 }
