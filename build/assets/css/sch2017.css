@@ -50,6 +50,7 @@
 #section1 {
   background: url(../images/sch2017/section1-bg.jpg) center no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 #section1::after {
@@ -60,8 +61,8 @@
   background-position: center right;
   padding-bottom: 26%;
   position: absolute;
-  right: -6%;
-  bottom: -14%;
+  right: 0;
+  bottom: -20%;
   z-index: 1;
 }
 
@@ -319,6 +320,11 @@
   }
   #section1 .gray-box .container {
     padding: 10% 0 !important;
+  }
+  #section2.fp-section,
+  #section2 .fp-slide,
+  #section2 .fp-tableCell {
+    height: auto !important;
   }
   #section2 .OtherHot {
     padding-bottom: 10%;
