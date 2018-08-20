@@ -162,6 +162,8 @@ $primary-color: #051468;
                 margin-right: 0;
             }
             .ORimg {
+                width: 100%;
+                padding-bottom: 70%;
                 position: relative;
                 &::before {
                     content: '';
@@ -174,6 +176,14 @@ $primary-color: #051468;
                     right: 0;
                     top: 0;
                     @include transition(all 0.3s);
+                }
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    transform: translate(0, -50%);
                 }
             }
             @media (min-width: 1024px) {

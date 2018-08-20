@@ -191,6 +191,8 @@
 }
 
 #section2 .otherReport .ORitem .ORimg {
+  width: 100%;
+  padding-bottom: 70%;
   position: relative;
 }
 
@@ -209,6 +211,17 @@
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
+}
+
+#section2 .otherReport .ORitem .ORimg img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 @media (min-width: 1024px) {
