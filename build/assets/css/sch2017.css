@@ -192,7 +192,7 @@
 
 #section2 .otherReport .ORitem .ORimg {
   width: 100%;
-  padding-bottom: 28.6%;
+  padding-bottom: 70%;
   position: relative;
 }
 
@@ -404,6 +404,7 @@
     display: table-row;
   }
   #section2 .otherReport .ORitem .ORimg {
+    padding-bottom: 28.6%;
     width: 40%;
     display: table-cell;
     background: #ffffff;
