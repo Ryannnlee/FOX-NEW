@@ -747,6 +747,15 @@
     left: 5%;
     top: calc(5% + 70px);
   }
+  #section1 {
+    height: auto !important;
+  }
+  #section1 .fp-tableCell {
+    height: auto !important;
+  }
+  #section1 .fp-tableCell .fp-scrollable {
+    height: auto !important;
+  }
   .section1-bg {
     background: url(../images/index/section1-bg-m.jpg) center no-repeat;
     background-size: cover;
