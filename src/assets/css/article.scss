@@ -117,6 +117,7 @@ $primary-color: #051468;
             display: inline-block;
             margin: 1.5%;
             font-size: 16px;
+            vertical-align: top;
             &:nth-child(3n+1) {
                 margin-left: 0;
             }
@@ -124,7 +125,11 @@ $primary-color: #051468;
                 margin-right: 0;
             }
             .ERimg {
+                width: 100%;
+                padding-bottom: 71%;
                 position: relative;
+                background: #333333;
+                overflow: hidden;
                 &::before {
                     content: '';
                     width: 100%;
@@ -136,6 +141,15 @@ $primary-color: #051468;
                     right: 0;
                     top: 0;
                     @include transition(all 0.3s);
+                    z-index: 1;
+                }
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    transform: translate(0, -50%);
                 }
             }
             @media (min-width: 1024px) {
@@ -229,8 +243,11 @@ $primary-color: #051468;
             display: table;
             margin: 10px 0 !important;
             .ERimg {
+                padding-bottom: 28.6%;
                 width: 40%;
                 display: table-cell;
+                background: #333333;
+                overflow: hidden;
                 &::before {
                     content: none;
                 }

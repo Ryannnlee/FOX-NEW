@@ -163,8 +163,10 @@ $primary-color: #051468;
             }
             .ORimg {
                 width: 100%;
-                padding-bottom: 70%;
+                padding-bottom: 71%;
                 position: relative;
+                background: #333333;
+                overflow: hidden;
                 &::before {
                     content: '';
                     width: 100%;
@@ -176,6 +178,7 @@ $primary-color: #051468;
                     right: 0;
                     top: 0;
                     @include transition(all 0.3s);
+                    z-index: 1;
                 }
                 img {
                     width: 100%;
@@ -367,7 +370,8 @@ $primary-color: #051468;
                     padding-bottom: 28.6%;
                     width: 40%;
                     display: table-cell;
-                    background: #ffffff;
+                    background: #333333;
+                    overflow: hidden;
                     &::before {
                         content: none;
                     }

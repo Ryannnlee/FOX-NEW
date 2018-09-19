@@ -192,8 +192,10 @@
 
 #section2 .otherReport .ORitem .ORimg {
   width: 100%;
-  padding-bottom: 70%;
+  padding-bottom: 71%;
   position: relative;
+  background: #333333;
+  overflow: hidden;
 }
 
 #section2 .otherReport .ORitem .ORimg::before {
@@ -211,6 +213,7 @@
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
+  z-index: 1;
 }
 
 #section2 .otherReport .ORitem .ORimg img {
@@ -407,7 +410,8 @@
     padding-bottom: 28.6%;
     width: 40%;
     display: table-cell;
-    background: #ffffff;
+    background: #333333;
+    overflow: hidden;
   }
   #section2 .otherReport .ORitem .ORimg::before {
     content: none;
